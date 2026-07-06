@@ -118,7 +118,7 @@ stages:
           Write-Host "Testing GET Customers"
 
           $response = Invoke-WebRequest `
-            -Uri "$baseUrl/api/customers" `
+            -Uri "$baseUrl/api/Customers" `
             -Method Get
 
           if($response.StatusCode -ne 200)
