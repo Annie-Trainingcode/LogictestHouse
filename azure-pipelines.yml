@@ -91,3 +91,42 @@ stages:
               slotName: 'staging-qa'
 
               package: '$(Pipeline.Workspace)/drop/**/*.zip'
+# =============================
+# API FUNCTIONAL TEST
+# =============================
+- stage: APIFunctionalTest
+
+  displayName: API Functional Testing
+
+  dependsOn: DeployQA
+
+  jobs:
+
+  - job: ValidateAPI
+
+    steps:
+
+    - task: PowerShell@2
+      displayName: 'Validate Customers API'
+
+    
+      inputs:
+        targetType: inline
+        script: |
+
+          $url = "https://aecstestdeploywebapp-staging-qa.azurewebsites.net/api/customers"
+
+          try
+          {
+              $response = Invoke-RestMethod -Uri $url -Method Get
+
+              Write-Host " API Functional Test Passed"
+          }
+          catch
+          {
+              Write-Error " API Functional Test Failed"
+              throw
+          }
+
+
+          Write-Host "GET Customers Passed"
