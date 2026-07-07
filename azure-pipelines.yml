@@ -108,25 +108,59 @@ stages:
 
     - task: PowerShell@2
       displayName: 'Validate Customers API'
-
-    
       inputs:
         targetType: inline
         script: |
-
+          # GET Test
           $url = "https://aecstestdeploywebapp-staging-qa.azurewebsites.net/api/customers"
 
           try
           {
               $response = Invoke-RestMethod -Uri $url -Method Get
-
-              Write-Host " API Functional Test Passed"
+              Write-Host " GET Customer Test Passed"
           }
           catch
           {
-              Write-Error " API Functional Test Failed"
+              Write-Error " GET Customer Test Failed"
               throw
           }
 
+    - task: PowerShell@2
+      displayName: 'Validate Create Customer API'
 
-          Write-Host "GET Customers Passed"
+      inputs:
+        targetType: inline
+        script: |
+
+          $baseUrl = "https://aecstestdeploywebapp-staging-qa.azurewebsites.net/api/customers"
+
+          # Create Customer
+          $customerId = Get-Random -Minimum 10000 -Maximum 99999
+
+          $body = @{
+              id = $customerId
+              name = "Annie Pipeline"
+              email = "annie@test.com"
+              city = "Chennai"
+          } | ConvertTo-Json
+
+          Invoke-RestMethod `
+            -Uri $baseUrl `
+            -Method Post `
+            -Body $body `
+            -ContentType "application/json"
+
+          Write-Host "POST Success"
+
+          $customer = Invoke-RestMethod `
+            -Uri "$baseUrl/$customerId" `
+            -Method Get
+
+          if ($customer.id -eq $customerId)
+          {
+              Write-Host "Verification Passed"
+          }
+          else
+          {
+              throw "Verification Failed"
+          }
