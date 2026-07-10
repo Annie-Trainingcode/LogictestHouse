@@ -161,11 +161,11 @@ namespace DemoAngularCrudApi.Controllers
         {
             _configuration = configuration;
         }
-        /* 
+    
             [HttpGet("discount")]
             public IActionResult GetDiscount()
             {
-                bool featureEnabled =
+               /*  bool featureEnabled =
                     _configuration.GetValue<bool>(
                         "FeatureManagement:EnableDiscountFeature");
 
@@ -173,11 +173,11 @@ namespace DemoAngularCrudApi.Controllers
                 {
                     return Ok("New Discount Feature Enabled");
                 }
-
+ */
                 return Ok("Old Logic Running");
             }
-        }
-         */
+        
+        
       /* [HttpGet("discount")]
 public IActionResult GetDiscount()
 {
