@@ -178,7 +178,7 @@ namespace DemoAngularCrudApi.Controllers
             }
         }
          */
-      [HttpGet("discount")]
+      /* [HttpGet("discount")]
 public IActionResult GetDiscount()
 {
     string version =
@@ -190,6 +190,6 @@ public IActionResult GetDiscount()
     }
 
     return Ok("Offer A : Flat ₹100 Discount");
-}
+} */
     }
 }
