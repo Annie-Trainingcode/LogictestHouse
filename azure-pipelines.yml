@@ -200,7 +200,7 @@ stages:
 
           Write-Host "Response Time = $elapsed ms"
 
-          if($elapsed -gt 500)
+          if($elapsed -gt 3000)
           {
               throw "Performance Test Failed. Response took more than 3 seconds."
           }
