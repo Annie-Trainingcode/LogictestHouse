@@ -152,29 +152,44 @@ namespace DemoAngularCrudApi.Controllers
         }
     }
     [ApiController]
-[Route("api/[controller]")]
-public class CustomerController : ControllerBase
-{
-    private readonly IConfiguration _configuration;
-
-    public CustomerController(IConfiguration configuration)
+    [Route("api/[controller]")]
+    public class CustomerController : ControllerBase
     {
-        _configuration = configuration;
-    }
+        private readonly IConfiguration _configuration;
 
-    [HttpGet("discount")]
-    public IActionResult GetDiscount()
-    {
-        bool featureEnabled =
-            _configuration.GetValue<bool>(
-                "FeatureManagement:EnableDiscountFeature");
-
-        if (featureEnabled)
+        public CustomerController(IConfiguration configuration)
         {
-            return Ok("New Discount Feature Enabled");
+            _configuration = configuration;
         }
+        /* 
+            [HttpGet("discount")]
+            public IActionResult GetDiscount()
+            {
+                bool featureEnabled =
+                    _configuration.GetValue<bool>(
+                        "FeatureManagement:EnableDiscountFeature");
 
-        return Ok("Old Logic Running");
+                if (featureEnabled)
+                {
+                    return Ok("New Discount Feature Enabled");
+                }
+
+                return Ok("Old Logic Running");
+            }
+        }
+         */
+      [HttpGet("discount")]
+public IActionResult GetDiscount()
+{
+    string version =
+        _configuration["FeatureManagement:OfferVersion"];
+
+    if(version == "B")
+    {
+        return Ok("Offer B : 10% Discount");
     }
+
+    return Ok("Offer A : Flat ₹100 Discount");
 }
+    }
 }
