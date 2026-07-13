@@ -157,12 +157,12 @@ namespace DemoAngularCrudApi.Controllers
     {
         private readonly IConfiguration _configuration;
 
-       /*  public CustomerController(IConfiguration configuration)
+      public CustomerController(IConfiguration configuration)
         {
             _configuration = configuration;
         }
     
-            [HttpGet("discount")]
+         /*      [HttpGet("discount")]
             public IActionResult GetDiscount()
             {
                  bool featureEnabled =
@@ -181,15 +181,14 @@ namespace DemoAngularCrudApi.Controllers
        [HttpGet("discount")]
 public IActionResult GetDiscount()
 {
-    string version =
-        _configuration["FeatureManagement:OfferVersion"];
+    string version =   _configuration["FeatureManagement:OfferVersion"];
 
     if(version == "B")
     {
         return Ok("Offer B : 10% Discount");
     }
 
-    return Ok("Offer A : Flat ₹100 Discount");
+    return Ok("Offer A : Flat ₹100 Discount"+version);
 }
     }
 }
