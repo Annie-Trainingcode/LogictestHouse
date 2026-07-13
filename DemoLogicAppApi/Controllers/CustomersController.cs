@@ -157,7 +157,7 @@ namespace DemoAngularCrudApi.Controllers
     {
         private readonly IConfiguration _configuration;
 
-        public CustomerController(IConfiguration configuration)
+       /*  public CustomerController(IConfiguration configuration)
         {
             _configuration = configuration;
         }
@@ -176,9 +176,9 @@ namespace DemoAngularCrudApi.Controllers
  
                 return Ok("Old Logic Running");
             }
+         */
         
-        
-      /* [HttpGet("discount")]
+       [HttpGet("discount")]
 public IActionResult GetDiscount()
 {
     string version =
@@ -190,6 +190,6 @@ public IActionResult GetDiscount()
     }
 
     return Ok("Offer A : Flat ₹100 Discount");
-} */
+}
     }
 }
