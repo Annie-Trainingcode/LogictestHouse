@@ -1,0 +1,12 @@
+C:\Users\Administrator\Desktop\AzureDevOps\Demos\customer.common\bin\Release\net9.0\Customer.Common.deps.json
+C:\Users\Administrator\Desktop\AzureDevOps\Demos\customer.common\bin\Release\net9.0\Customer.Common.dll
+C:\Users\Administrator\Desktop\AzureDevOps\Demos\customer.common\bin\Release\net9.0\Customer.Common.pdb
+C:\Users\Administrator\Desktop\AzureDevOps\Demos\customer.common\obj\Release\net9.0\Customer.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\AzureDevOps\Demos\customer.common\obj\Release\net9.0\Customer.Common.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\AzureDevOps\Demos\customer.common\obj\Release\net9.0\Customer.Common.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\AzureDevOps\Demos\customer.common\obj\Release\net9.0\Customer.Common.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\AzureDevOps\Demos\customer.common\obj\Release\net9.0\Customer.Common.sourcelink.json
+C:\Users\Administrator\Desktop\AzureDevOps\Demos\customer.common\obj\Release\net9.0\Customer.Common.dll
+C:\Users\Administrator\Desktop\AzureDevOps\Demos\customer.common\obj\Release\net9.0\refint\Customer.Common.dll
+C:\Users\Administrator\Desktop\AzureDevOps\Demos\customer.common\obj\Release\net9.0\Customer.Common.pdb
+C:\Users\Administrator\Desktop\AzureDevOps\Demos\customer.common\obj\Release\net9.0\ref\Customer.Common.dll

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Customer.Common</id>
+    <version>1.0.0</version>
+    <authors>Customer.Common</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="1e9b92d2901cc6257b06468cbb4198523d86d61b" />
+    <dependencies>
+      <group targetFramework="net9.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Administrator\Desktop\AzureDevOps\Demos\customer.common\bin\Release\net9.0\Customer.Common.dll" target="lib\net9.0\Customer.Common.dll" />
+  </files>
+</package>
